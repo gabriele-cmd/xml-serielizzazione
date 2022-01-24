@@ -27,5 +27,8 @@ public class main
         xmlMapper.writeValue(new File("src/main/java/it/meucci/classeAgg.xml"), value); //Serializzo
         File newFile = new File("classeAgg.xml"); //creo nuovo file XML
         
+        //Serializzazione STRINGA
+        String xml = xmlMapper.writeValueAsString(value);
+        System.out.println("\n" + xml);
     }
 }
