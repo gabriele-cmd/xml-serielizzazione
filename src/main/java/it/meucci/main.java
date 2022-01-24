@@ -12,6 +12,7 @@ public class main
 {
     public static void main( String[] args ) throws JsonParseException, JsonMappingException, IOException
     {
+        //Deserializzazione
         File file = new File("src/main/java/it/meucci/classe.xml"); //indico il percorso del file da deserializzare
         XmlMapper xmlMapper = new XmlMapper();
         root value = xmlMapper.readValue(file, root.class);
@@ -22,7 +23,7 @@ public class main
             System.out.println("- " + value.getStudenti().get(i).getCognome() + " " + value.getStudenti().get(i).getNome());
         }
 
-        //SERIALIZZAZIONE
+        //Serializzazione FILE
         xmlMapper.enable(SerializationFeature.INDENT_OUTPUT); //Stampo le stringhe una sotto l'altra
         xmlMapper.writeValue(new File("src/main/java/it/meucci/classeAgg.xml"), value); //Serializzo
         File newFile = new File("classeAgg.xml"); //creo nuovo file XML
