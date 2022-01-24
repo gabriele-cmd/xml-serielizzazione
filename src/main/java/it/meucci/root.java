@@ -6,7 +6,7 @@ public class root {
     public int annoDiInizio;
     public aula aula = new aula();
     public String classe;
-    public int numeroFinestreM;
+    public int numeroFinestre;
     public String specializzazione;
     public Vector <element> studenti = new Vector<>();
     
@@ -28,11 +28,11 @@ public class root {
     public void setClasse(String classe) {
         this.classe = classe;
     }
-    public int getNumeroFinestreM() {
-        return numeroFinestreM;
+    public int getNumeroFinestre() {
+        return numeroFinestre;
     }
-    public void setNumeroFinestreM(int numeroFinestreM) {
-        this.numeroFinestreM = numeroFinestreM;
+    public void setNumeroFinestre(int numeroFinestreM) {
+        this.numeroFinestre = numeroFinestreM;
     }
     public String getSpecializzazione() {
         return specializzazione;
